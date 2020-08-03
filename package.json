@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/osonovaakylai/NodeJS-Course-HW-1/issues"
   },
-  "homepage": "https://github.com/osonovaakylai/NodeJS-Course-HW-1#readme"
+  "homepage": "https://github.com/osonovaakylai/NodeJS-Course-HW-1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "delay": "2500"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
 }
